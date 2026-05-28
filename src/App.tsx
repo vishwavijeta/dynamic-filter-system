@@ -51,7 +51,7 @@ function App() {
 
       <EmployeeTable
         data={filteredData}
-        totalRecords={employees.length}
+        totalRecords={employees?.length}
       />
 
     </Container>

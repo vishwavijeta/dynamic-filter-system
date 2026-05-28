@@ -2,7 +2,7 @@ import type { FilterCondition } from "../types/filter.types";
 import { getNestedValue } from "./getNestedValue";
 
 const isRange = (
-    value: FilterCondition["value"]
+    value: FilterCondition["value"] | undefined
 ): value is {
     min?: string;
     max?: string;
@@ -11,26 +11,26 @@ const isRange = (
 } => typeof value === "object" && !Array.isArray(value);
 
 const hasFilterValue = (filter: FilterCondition) => {
-    if (!filter.field || !filter.operator) return false;
+    if (!filter?.field || !filter?.operator) return false;
 
-    if (Array.isArray(filter.value)) {
-        return filter.value.length > 0;
+    if (Array.isArray(filter?.value)) {
+        return filter?.value?.length > 0;
     }
 
-    if (isRange(filter.value)) {
+    if (isRange(filter?.value)) {
         return Boolean(
-            filter.value.min ||
-            filter.value.max ||
-            filter.value.start ||
-            filter.value.end
+            filter?.value?.min ||
+            filter?.value?.max ||
+            filter?.value?.start ||
+            filter?.value?.end
         );
     }
 
-    return filter.value !== "" && filter.value !== null;
+    return filter?.value !== "" && filter?.value !== null;
 };
 
 const normalizeText = (value: unknown) =>
-    String(value ?? "").toLowerCase();
+    String(value ?? "")?.toLowerCase();
 
 const toNumber = (value: unknown) => {
     const parsed = Number(value);
@@ -39,7 +39,7 @@ const toNumber = (value: unknown) => {
 };
 
 const toTime = (value: unknown) => {
-    const parsed = new Date(String(value)).getTime();
+    const parsed = new Date(String(value))?.getTime();
 
     return Number.isFinite(parsed) ? parsed : null;
 };
@@ -49,23 +49,23 @@ const matchFilter = (
     filter: FilterCondition
 ) => {
     const textValue = normalizeText(itemValue);
-    const filterText = normalizeText(filter.value);
+    const filterText = normalizeText(filter?.value);
     const numericValue = toNumber(itemValue);
-    const filterNumber = toNumber(filter.value);
+    const filterNumber = toNumber(filter?.value);
 
-    switch (filter.operator) {
+    switch (filter?.operator) {
 
         case "contains":
-            return textValue.includes(filterText);
+            return textValue?.includes(filterText);
 
         case "doesNotContain":
-            return !textValue.includes(filterText);
+            return !textValue?.includes(filterText);
 
         case "startsWith":
-            return textValue.startsWith(filterText);
+            return textValue?.startsWith(filterText);
 
         case "endsWith":
-            return textValue.endsWith(filterText);
+            return textValue?.endsWith(filterText);
 
         case "equals":
             if (numericValue !== null && filterNumber !== null) {
@@ -103,12 +103,12 @@ const matchFilter = (
             );
 
         case "between": {
-            if (!isRange(filter.value)) return true;
+            if (!isRange(filter?.value)) return true;
 
-            const min = toNumber(filter.value.min);
-            const max = toNumber(filter.value.max);
-            const start = toTime(filter.value.start);
-            const end = toTime(filter.value.end);
+            const min = toNumber(filter?.value?.min);
+            const max = toNumber(filter?.value?.max);
+            const start = toTime(filter?.value?.start);
+            const end = toTime(filter?.value?.end);
             const itemTime = toTime(itemValue);
 
             if (start !== null || end !== null) {
@@ -127,26 +127,26 @@ const matchFilter = (
         }
 
         case "is":
-            return itemValue === filter.value;
+            return itemValue === filter?.value;
 
         case "isNot":
-            return itemValue !== filter.value;
+            return itemValue !== filter?.value;
 
         case "in":
             return (
-                Array.isArray(filter.value) &&
+                Array.isArray(filter?.value) &&
                 Array.isArray(itemValue) &&
-                filter.value.some((value) =>
-                    itemValue.includes(value)
+                filter?.value?.some((value) =>
+                    itemValue?.includes(value)
                 )
             );
 
         case "notIn":
             return (
-                Array.isArray(filter.value) &&
+                Array.isArray(filter?.value) &&
                 Array.isArray(itemValue) &&
-                filter.value.every(
-                    (value) => !itemValue.includes(value)
+                filter?.value?.every(
+                    (value) => !itemValue?.includes(value)
                 )
             );
 
@@ -156,13 +156,13 @@ const matchFilter = (
 };
 
 const groupFiltersByField = (filters: FilterCondition[]) =>
-    filters.reduce(
+    filters?.reduce(
         (grouped, filter) => {
             const fieldFilters =
-                grouped.get(filter.field) || [];
+                grouped?.get(filter?.field) || [];
 
-            fieldFilters.push(filter);
-            grouped.set(filter.field, fieldFilters);
+            fieldFilters?.push(filter);
+            grouped?.set(filter?.field, fieldFilters);
 
             return grouped;
         },
@@ -170,25 +170,25 @@ const groupFiltersByField = (filters: FilterCondition[]) =>
     );
 
 const isExclusionOperator = (operator: string) =>
-    ["doesNotContain", "isNot", "notIn"].includes(operator);
+    ["doesNotContain", "isNot", "notIn"]?.includes(operator);
 
 const matchFieldFilters = (
     itemValue: unknown,
     filters: FilterCondition[]
 ) => {
-    const exclusionFilters = filters.filter((filter) =>
-        isExclusionOperator(filter.operator)
+    const exclusionFilters = filters?.filter((filter) =>
+        isExclusionOperator(filter?.operator)
     );
-    const inclusionFilters = filters.filter(
-        (filter) => !isExclusionOperator(filter.operator)
+    const inclusionFilters = filters?.filter(
+        (filter) => !isExclusionOperator(filter?.operator)
     );
 
-    const passesExclusions = exclusionFilters.every((filter) =>
+    const passesExclusions = exclusionFilters?.every((filter) =>
         matchFilter(itemValue, filter)
     );
     const passesInclusions =
-        inclusionFilters.length === 0 ||
-        inclusionFilters.some((filter) =>
+        inclusionFilters?.length === 0 ||
+        inclusionFilters?.some((filter) =>
             matchFilter(itemValue, filter)
         );
 
@@ -199,12 +199,12 @@ export const applyFilters = <T extends object>(
     data: T[],
     filters: FilterCondition[]
 ) => {
-    const activeFilters = filters.filter(hasFilterValue);
+    const activeFilters = filters?.filter(hasFilterValue);
     const filtersByField = groupFiltersByField(activeFilters);
 
     // Different fields are AND. Same-field inclusions are OR, exclusions are AND.
-    return data.filter((item) =>
-        [...filtersByField.entries()].every(
+    return data?.filter((item) =>
+        [...filtersByField.entries()]?.every(
             ([field, fieldFilters]) => {
                 const itemValue = getNestedValue(
                     item as Record<string, unknown>,

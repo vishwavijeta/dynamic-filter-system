@@ -46,16 +46,16 @@ const FilterInput = ({
 
     const rangeValue = isRangeValue(value) ? value : {};
 
-    const minIsInvalid = isInvalidNumber(rangeValue.min);
-    const maxIsInvalid = isInvalidNumber(rangeValue.max);
+    const minIsInvalid = isInvalidNumber(rangeValue?.min);
+    const maxIsInvalid = isInvalidNumber(rangeValue?.max);
     const rangeOrderIsInvalid =
         !minIsInvalid &&
         !maxIsInvalid &&
-        rangeValue.min !== undefined &&
-        rangeValue.min !== "" &&
-        rangeValue.max !== undefined &&
-        rangeValue.max !== "" &&
-        Number(rangeValue.min) > Number(rangeValue.max);
+        rangeValue?.min !== undefined &&
+        rangeValue?.min !== "" &&
+        rangeValue?.max !== undefined &&
+        rangeValue?.max !== "" &&
+        Number(rangeValue?.min) > Number(rangeValue?.max);
 
     const renderNumberRange = (isCurrency = false) => (
         <Box
@@ -69,7 +69,7 @@ const FilterInput = ({
                 type="number"
                 fullWidth
                 label="Min"
-                value={rangeValue.min || ""}
+                value={rangeValue?.min || ""}
                 error={minIsInvalid || rangeOrderIsInvalid}
                 helperText={
                     rangeOrderIsInvalid
@@ -93,7 +93,7 @@ const FilterInput = ({
                 onChange={(event) =>
                     onChange({
                         ...rangeValue,
-                        min: event.target.value,
+                        min: event?.target?.value,
                     })
                 }
             />
@@ -101,7 +101,7 @@ const FilterInput = ({
                 type="number"
                 fullWidth
                 label="Max"
-                value={rangeValue.max || ""}
+                value={rangeValue?.max || ""}
                 error={maxIsInvalid || rangeOrderIsInvalid}
                 helperText={
                     rangeOrderIsInvalid
@@ -125,7 +125,7 @@ const FilterInput = ({
                 onChange={(event) =>
                     onChange({
                         ...rangeValue,
-                        max: event.target.value,
+                        max: event?.target?.value,
                     })
                 }
             />
@@ -144,14 +144,14 @@ const FilterInput = ({
                 type="date"
                 fullWidth
                 label="Start"
-                value={rangeValue.start || ""}
+                value={rangeValue?.start || ""}
                 slotProps={{
                     inputLabel: { shrink: true },
                 }}
                 onChange={(event) =>
                     onChange({
                         ...rangeValue,
-                        start: event.target.value,
+                        start: event?.target?.value,
                     })
                 }
             />
@@ -159,21 +159,21 @@ const FilterInput = ({
                 type="date"
                 fullWidth
                 label="End"
-                value={rangeValue.end || ""}
+                value={rangeValue?.end || ""}
                 slotProps={{
                     inputLabel: { shrink: true },
                 }}
                 onChange={(event) =>
                     onChange({
                         ...rangeValue,
-                        end: event.target.value,
+                        end: event?.target?.value,
                     })
                 }
             />
         </Box>
     );
 
-    switch (field.type) {
+    switch (field?.type) {
 
         case "text":
             return (
@@ -181,7 +181,7 @@ const FilterInput = ({
                     fullWidth
                     value={value || ""}
                     onChange={(e) =>
-                        onChange(e.target.value)
+                        onChange(e?.target?.value)
                     }
                 />
             );
@@ -211,7 +211,7 @@ const FilterInput = ({
                         },
                     }}
                     onChange={(e) =>
-                        onChange(e.target.value)
+                        onChange(e?.target?.value)
                     }
                 />
             );
@@ -238,7 +238,7 @@ const FilterInput = ({
                         inputLabel: { shrink: true },
                     }}
                     onChange={(event) =>
-                        onChange(event.target.value)
+                        onChange(event?.target?.value)
                     }
                 />
             );
@@ -251,10 +251,10 @@ const FilterInput = ({
                     label="Value"
                     value={value || ""}
                     onChange={(e) =>
-                        onChange(e.target.value)
+                        onChange(e?.target?.value)
                     }
                 >
-                    {field.options?.map((option) => (
+                    {field?.options?.map((option) => (
                         <MenuItem
                             key={option}
                             value={option}
@@ -269,7 +269,7 @@ const FilterInput = ({
             return (
                 <Autocomplete
                     multiple
-                    options={field.options || []}
+                    options={field?.options || []}
                     disableCloseOnSelect
                     value={Array.isArray(value) ? value : []}
                     onChange={(_, newValue) =>
@@ -307,7 +307,7 @@ const FilterInput = ({
                         <Switch
                             checked={Boolean(value)}
                             onChange={(event) =>
-                                onChange(event.target.checked)
+                                onChange(event?.target?.checked)
                             }
                         />
                     }

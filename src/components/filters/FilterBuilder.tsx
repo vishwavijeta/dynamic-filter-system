@@ -32,7 +32,7 @@ const FilterBuilder = ({
 }: Props) => {
 
     const addFilter = () => {
-        const firstField = fields[0];
+        const firstField = fields?.[0];
         const firstOperator = firstField
             ? {
                   text: "contains",
@@ -42,7 +42,7 @@ const FilterBuilder = ({
                   select: "is",
                   multiSelect: "in",
                   boolean: "is",
-              }[firstField.type]
+              }[firstField?.type]
             : "";
 
         setFilters((prev) => [
@@ -63,8 +63,8 @@ const FilterBuilder = ({
     ) => {
 
         setFilters((prev) =>
-            prev.map((filter) =>
-                filter.id === id
+            prev?.map((filter) =>
+                filter?.id === id
                     ? {
                         ...filter,
                         [key]: value,
@@ -79,8 +79,8 @@ const FilterBuilder = ({
     ) => {
 
         setFilters((prev) =>
-            prev.filter(
-                (filter) => filter.id !== id
+            prev?.filter(
+                (filter) => filter?.id !== id
             )
         );
     };
@@ -117,7 +117,7 @@ const FilterBuilder = ({
                     <Button
                         variant="outlined"
                         startIcon={<RotateCcw size={18} />}
-                        disabled={filters.length === 0}
+                        disabled={filters?.length === 0}
                         onClick={() => setFilters([])}
                     >
                         Clear All
@@ -133,9 +133,9 @@ const FilterBuilder = ({
                 </Box>
             </Box>
 
-            {filters.map((filter) => (
+            {filters?.map((filter) => (
                 <FilterRow
-                    key={filter.id}
+                    key={filter?.id}
                     filter={filter}
                     fields={fields}
                     onChange={updateFilter}
@@ -143,7 +143,7 @@ const FilterBuilder = ({
                 />
             ))}
 
-            {filters.length === 0 && (
+            {filters?.length === 0 && (
                 <Typography
                     variant="body2"
                     color="text.secondary"

@@ -49,7 +49,7 @@ const getExportValue = (
     );
 
     if (Array.isArray(value)) {
-        return value.join("; ");
+        return value?.join("; ");
     }
 
     if (typeof value === "boolean") {
@@ -60,7 +60,7 @@ const getExportValue = (
 };
 
 const escapeCsvCell = (value: string) => {
-    const escaped = value.replace(/"/g, '""');
+    const escaped = value?.replace(/"/g, '""');
 
     return /[",\n\r]/.test(escaped)
         ? `"${escaped}"`
@@ -73,13 +73,13 @@ const downloadFile = (
     type: string
 ) => {
     const blob = new Blob([content], { type });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
+    const url = URL?.createObjectURL(blob);
+    const link = document?.createElement("a");
 
     link.href = url;
     link.download = fileName;
-    link.click();
-    URL.revokeObjectURL(url);
+    link?.click();
+    URL?.revokeObjectURL(url);
 };
 
 const formatValue = (
@@ -109,7 +109,7 @@ const formatValue = (
                     minWidth: 180,
                 }}
             >
-                {value.map((skill) => (
+                {value?.map((skill) => (
                     <Chip
                         key={String(skill)}
                         label={String(skill)}
@@ -136,7 +136,7 @@ const EmployeeTable = ({
         useState<SortDirection>("asc");
 
     const sortedData = useMemo(() => {
-        return [...data].sort((a, b) => {
+        return [...(data ?? [])]?.sort((a, b) => {
             const aValue = getNestedValue(
                 a as unknown as Record<string, unknown>,
                 sortKey
@@ -150,7 +150,7 @@ const EmployeeTable = ({
                 typeof aValue === "number" &&
                 typeof bValue === "number"
                     ? aValue - bValue
-                    : String(aValue ?? "").localeCompare(
+                    : String(aValue ?? "")?.localeCompare(
                           String(bValue ?? "")
                       );
 
@@ -173,19 +173,19 @@ const EmployeeTable = ({
     };
 
     const handleExportCsv = () => {
-        const header = columns.map((column) =>
-            escapeCsvCell(column.label)
+        const header = columns?.map((column) =>
+            escapeCsvCell(column?.label ?? "")
         );
-        const rows = sortedData.map((employee) =>
-            columns.map((column) =>
+        const rows = sortedData?.map((employee) =>
+            columns?.map((column) =>
                 escapeCsvCell(
-                    getExportValue(employee, column.key)
+                    getExportValue(employee, column?.key ?? "")
                 )
             )
         );
         const csv = [header, ...rows]
-            .map((row) => row.join(","))
-            .join("\n");
+            ?.map((row) => row?.join(","))
+            ?.join("\n");
 
         downloadFile(
             "filtered-employees.csv",
@@ -214,13 +214,13 @@ const EmployeeTable = ({
                 }}
             >
                 <Typography variant="h6">
-                    Records: {data.length} of {totalRecords}
+                    Records: {data?.length} of {totalRecords}
                 </Typography>
 
                 <Button
                     variant="outlined"
                     startIcon={<Download size={18} />}
-                    disabled={sortedData.length === 0}
+                    disabled={sortedData?.length === 0}
                     onClick={handleExportCsv}
                 >
                     Export CSV
@@ -232,25 +232,25 @@ const EmployeeTable = ({
 
                 <TableHead>
                     <TableRow>
-                        {columns.map((column) => (
-                            <TableCell key={column.key}>
-                                {column.sortable === false ? (
-                                    column.label
+                        {columns?.map((column) => (
+                            <TableCell key={column?.key}>
+                                {column?.sortable === false ? (
+                                    column?.label
                                 ) : (
                                     <TableSortLabel
                                         active={
-                                            sortKey === column.key
+                                            sortKey === column?.key
                                         }
                                         direction={
-                                            sortKey === column.key
+                                            sortKey === column?.key
                                                 ? sortDirection
                                                 : "asc"
                                         }
                                         onClick={() =>
-                                            handleSort(column.key)
+                                            handleSort(column?.key ?? "")
                                         }
                                     >
-                                        {column.label}
+                                        {column?.label}
                                     </TableSortLabel>
                                 )}
                             </TableCell>
@@ -260,14 +260,14 @@ const EmployeeTable = ({
 
                 <TableBody>
 
-                    {sortedData.map((employee) => (
+                    {sortedData?.map((employee) => (
 
-                        <TableRow key={employee.id}>
-                            {columns.map((column) => (
-                                <TableCell key={column.key}>
+                        <TableRow key={employee?.id}>
+                            {columns?.map((column) => (
+                                <TableCell key={column?.key}>
                                     {formatValue(
                                         employee,
-                                        column.key
+                                        column?.key ?? ""
                                     )}
                                 </TableCell>
                             ))}
@@ -275,10 +275,10 @@ const EmployeeTable = ({
                         </TableRow>
                     ))}
 
-                    {sortedData.length === 0 && (
+                    {sortedData?.length === 0 && (
                         <TableRow>
                             <TableCell
-                                colSpan={columns.length}
+                                colSpan={columns?.length}
                                 align="center"
                                 sx={{ py: 6 }}
                             >

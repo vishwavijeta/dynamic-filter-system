@@ -37,24 +37,24 @@ const FilterRow = ({
     onDelete,
 }: Props) => {
 
-    const selectedField = fields.find(
-        (f) => f.key === filter.field
+    const selectedField = fields?.find(
+        (f) => f?.key === filter?.field
     );
 
     const operators =
-        selectedField ? operatorsByType[selectedField.type] : [];
+        selectedField ? operatorsByType[selectedField?.type] : [];
 
     const handleFieldChange = (fieldKey: string) => {
-        const nextField = fields.find(
-            (field) => field.key === fieldKey
+        const nextField = fields?.find(
+            (field) => field?.key === fieldKey
         );
         const nextOperator = nextField
-            ? operatorsByType[nextField.type][0]?.value || ""
+            ? operatorsByType[nextField?.type]?.[0]?.value || ""
             : "";
 
-        onChange(filter.id, "field", fieldKey);
-        onChange(filter.id, "operator", nextOperator);
-        onChange(filter.id, "value", "");
+        onChange(filter?.id, "field", fieldKey);
+        onChange(filter?.id, "operator", nextOperator);
+        onChange(filter?.id, "value", "");
     };
 
     return (
@@ -75,43 +75,43 @@ const FilterRow = ({
                 select
                 fullWidth
                 label="Field"
-                value={filter.field}
+                value={filter?.field}
                 onChange={(event) =>
-                    handleFieldChange(event.target.value)
+                    handleFieldChange(event?.target?.value)
                 }
             >
-                {fields.map((field) => (
+                {fields?.map((field) => (
                     <MenuItem
-                        key={field.key}
-                        value={field.key}
+                        key={field?.key}
+                        value={field?.key}
                     >
-                        {field.label}
+                        {field?.label}
                     </MenuItem>
                 ))}
             </TextField>
 
             <OperatorSelect
                 operators={operators}
-                value={filter.operator}
+                value={filter?.operator}
                 onChange={(value) => {
-                    onChange(filter.id, "operator", value);
-                    onChange(filter.id, "value", "");
+                    onChange(filter?.id, "operator", value);
+                    onChange(filter?.id, "value", "");
                 }}
             />
 
             <FilterInput
                 field={selectedField}
-                operator={filter.operator}
-                value={filter.value}
+                operator={filter?.operator}
+                value={filter?.value}
                 onChange={(value) =>
-                    onChange(filter.id, "value", value)
+                    onChange(filter?.id, "value", value)
                 }
             />
 
             <Tooltip title="Remove filter">
                 <IconButton
                     color="error"
-                    onClick={() => onDelete(filter.id)}
+                    onClick={() => onDelete(filter?.id)}
                     aria-label="Remove filter"
                 >
                     <Trash2 size={20} />

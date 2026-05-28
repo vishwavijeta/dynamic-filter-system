@@ -22,15 +22,15 @@ const OperatorSelect = ({
             fullWidth
             label="Operator"
             value={value}
-            disabled={operators.length === 0}
-            onChange={(event) => onChange(event.target.value)}
+            disabled={operators?.length === 0}
+            onChange={(event) => onChange(event?.target?.value)}
         >
-            {operators.map((operator) => (
+            {operators?.map((operator) => (
                 <MenuItem
-                    key={operator.value}
-                    value={operator.value}
+                    key={operator?.value}
+                    value={operator?.value}
                 >
-                    {operator.label}
+                    {operator?.label}
                 </MenuItem>
             ))}
         </TextField>

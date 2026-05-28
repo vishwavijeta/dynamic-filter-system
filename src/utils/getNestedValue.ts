@@ -3,8 +3,8 @@ export const getNestedValue = (
     path: string
 ) => {
     return path
-        .split(".")
-        .reduce<unknown>((acc, key) => {
+        ?.split(".")
+        ?.reduce<unknown>((acc, key) => {
             if (
                 acc &&
                 typeof acc === "object" &&
