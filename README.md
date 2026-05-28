@@ -1,6 +1,6 @@
 # Dynamic Filter System
 
-Reusable React + TypeScript filter builder for client-side data tables. The filter UI is driven by field configuration, so a table can swap in a different schema without changing the filter components.
+Reusable React 18 + TypeScript filter builder for client-side data tables. The filter UI is driven by field configuration, so a table can swap in a different schema without changing the filter components.
 
 ## Setup
 
@@ -23,9 +23,10 @@ npm run lint
 - Text, number, currency, date, select, multi-select, and boolean inputs
 - Dynamic operator lists per field type
 - Real-time client-side filtering
-- AND logic across different fields, OR logic for multiple filters on the same field
+- AND logic across different fields
+- Same-field inclusion filters use OR logic, while exclusion filters use AND logic
 - Dot-notation nested field support, such as `address.city`
-- Sortable table with filtered/total counts and empty-state handling
+- Sortable table with filtered/total counts, empty-state handling, and CSV export
 
 ## Component Usage
 
