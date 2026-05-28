@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# Dynamic Filter System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Reusable React + TypeScript filter builder for client-side data tables. The filter UI is driven by field configuration, so a table can swap in a different schema without changing the filter components.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Build and lint:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run build
+npm run lint
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## What Is Included
+
+- Configuration-driven field definitions in `src/config/employeeFilters.ts`
+- 60 local employee records in `src/data/employees.json`
+- Text, number, currency, date, select, multi-select, and boolean inputs
+- Dynamic operator lists per field type
+- Real-time client-side filtering
+- AND logic across different fields, OR logic for multiple filters on the same field
+- Dot-notation nested field support, such as `address.city`
+- Sortable table with filtered/total counts and empty-state handling
+
+## Component Usage
+
+```tsx
+<FilterBuilder
+  filters={filters}
+  setFilters={setFilters}
+  fields={employeeFilters}
+/>
+```
+
+Each filter field is configured externally:
+
+```ts
+{
+  key: "address.city",
+  label: "City",
+  type: "select",
+  options: ["San Francisco", "New York", "Chicago"]
+}
+```
+
+Filtering is applied with:
+
+```ts
+const filteredData = applyFilters(data, filters);
 ```

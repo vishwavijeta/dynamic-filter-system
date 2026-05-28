@@ -1,0 +1,1412 @@
+[
+  {
+    "id": 1,
+    "name": "John Smith",
+    "email": "john.smith1@company.com",
+    "department": "Engineering",
+    "role": "Developer",
+    "salary": 52000,
+    "joinDate": "2019-01-01",
+    "isActive": false,
+    "skills": [
+      "React",
+      "Node.js"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 1,
+    "lastReview": "2025-04-01",
+    "performanceRating": 3
+  },
+  {
+    "id": 2,
+    "name": "Sarah Garcia",
+    "email": "sarah.garcia2@company.com",
+    "department": "HR",
+    "role": "Senior Developer",
+    "salary": 59250,
+    "joinDate": "2020-02-08",
+    "isActive": true,
+    "skills": [
+      "TypeScript",
+      "GraphQL",
+      "Figma"
+    ],
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    },
+    "projects": 2,
+    "lastReview": "2025-05-06",
+    "performanceRating": 3.3
+  },
+  {
+    "id": 3,
+    "name": "Maya Davis",
+    "email": "maya.davis3@company.com",
+    "department": "Finance",
+    "role": "Manager",
+    "salary": 66500,
+    "joinDate": "2021-03-15",
+    "isActive": true,
+    "skills": [
+      "Node.js",
+      "Python",
+      "SQL",
+      "Communication"
+    ],
+    "address": {
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA"
+    },
+    "projects": 3,
+    "lastReview": "2025-06-11",
+    "performanceRating": 3.6
+  },
+  {
+    "id": 4,
+    "name": "Liam Anderson",
+    "email": "liam.anderson4@company.com",
+    "department": "Sales",
+    "role": "Designer",
+    "salary": 73750,
+    "joinDate": "2022-04-22",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Figma",
+      "AWS",
+      "Leadership",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 4,
+    "lastReview": "2025-07-16",
+    "performanceRating": 3.9
+  },
+  {
+    "id": 5,
+    "name": "Ava Moore",
+    "email": "ava.moore5@company.com",
+    "department": "Product",
+    "role": "Recruiter",
+    "salary": 81000,
+    "joinDate": "2023-05-02",
+    "isActive": true,
+    "skills": [
+      "Python",
+      "SQL"
+    ],
+    "address": {
+      "city": "Seattle",
+      "state": "WA",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2025-08-21",
+    "performanceRating": 4.2
+  },
+  {
+    "id": 6,
+    "name": "Noah Harris",
+    "email": "noah.harris6@company.com",
+    "department": "Design",
+    "role": "Sales Executive",
+    "salary": 88250,
+    "joinDate": "2024-06-09",
+    "isActive": false,
+    "skills": [
+      "Figma",
+      "AWS",
+      "Leadership"
+    ],
+    "address": {
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2025-09-26",
+    "performanceRating": 4.5
+  },
+  {
+    "id": 7,
+    "name": "Emma Walker",
+    "email": "emma.walker7@company.com",
+    "department": "Operations",
+    "role": "Senior Developer",
+    "salary": 95500,
+    "joinDate": "2019-07-16",
+    "isActive": true,
+    "skills": [
+      "SQL",
+      "Communication",
+      "React",
+      "Node.js"
+    ],
+    "address": {
+      "city": "Denver",
+      "state": "CO",
+      "country": "USA"
+    },
+    "projects": 7,
+    "lastReview": "2025-10-04",
+    "performanceRating": 4.8
+  },
+  {
+    "id": 8,
+    "name": "Oliver Johnson",
+    "email": "oliver.johnson8@company.com",
+    "department": "Engineering",
+    "role": "Manager",
+    "salary": 102750,
+    "joinDate": "2020-08-23",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Leadership",
+      "TypeScript",
+      "GraphQL",
+      "Figma"
+    ],
+    "address": {
+      "city": "Atlanta",
+      "state": "GA",
+      "country": "USA"
+    },
+    "projects": 8,
+    "lastReview": "2025-11-09",
+    "performanceRating": 3.1
+  },
+  {
+    "id": 9,
+    "name": "Sophia Lee",
+    "email": "sophia.lee9@company.com",
+    "department": "HR",
+    "role": "Analyst",
+    "salary": 110000,
+    "joinDate": "2021-09-03",
+    "isActive": true,
+    "skills": [
+      "Communication",
+      "React"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 9,
+    "lastReview": "2025-12-14",
+    "performanceRating": 3.4
+  },
+  {
+    "id": 10,
+    "name": "Ethan Wilson",
+    "email": "ethan.wilson10@company.com",
+    "department": "Finance",
+    "role": "Recruiter",
+    "salary": 117250,
+    "joinDate": "2022-10-10",
+    "isActive": true,
+    "skills": [
+      "Leadership",
+      "TypeScript",
+      "GraphQL"
+    ],
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    },
+    "projects": 1,
+    "lastReview": "2025-01-19",
+    "performanceRating": 3.7
+  },
+  {
+    "id": 11,
+    "name": "Isabella Taylor",
+    "email": "isabella.taylor11@company.com",
+    "department": "Sales",
+    "role": "Sales Executive",
+    "salary": 124500,
+    "joinDate": "2023-11-17",
+    "isActive": false,
+    "skills": [
+      "React",
+      "Node.js",
+      "Python",
+      "SQL"
+    ],
+    "address": {
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA"
+    },
+    "projects": 2,
+    "lastReview": "2025-02-24",
+    "performanceRating": 4
+  },
+  {
+    "id": 12,
+    "name": "Lucas Jackson",
+    "email": "lucas.jackson12@company.com",
+    "department": "Product",
+    "role": "Developer",
+    "salary": 131750,
+    "joinDate": "2024-12-24",
+    "isActive": true,
+    "skills": [
+      "TypeScript",
+      "GraphQL",
+      "Figma",
+      "AWS",
+      "Leadership"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 3,
+    "lastReview": "2025-03-02",
+    "performanceRating": 4.3
+  },
+  {
+    "id": 13,
+    "name": "Mia Clark",
+    "email": "mia.clark13@company.com",
+    "department": "Design",
+    "role": "Manager",
+    "salary": 139000,
+    "joinDate": "2019-01-04",
+    "isActive": true,
+    "skills": [
+      "Node.js",
+      "Python"
+    ],
+    "address": {
+      "city": "Seattle",
+      "state": "WA",
+      "country": "USA"
+    },
+    "projects": 4,
+    "lastReview": "2025-04-07",
+    "performanceRating": 4.6
+  },
+  {
+    "id": 14,
+    "name": "Mason Young",
+    "email": "mason.young14@company.com",
+    "department": "Operations",
+    "role": "Analyst",
+    "salary": 146250,
+    "joinDate": "2020-02-11",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Figma",
+      "AWS"
+    ],
+    "address": {
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2025-05-12",
+    "performanceRating": 4.9
+  },
+  {
+    "id": 15,
+    "name": "Amelia Patel",
+    "email": "amelia.patel15@company.com",
+    "department": "Engineering",
+    "role": "Designer",
+    "salary": 55500,
+    "joinDate": "2021-03-18",
+    "isActive": true,
+    "skills": [
+      "Python",
+      "SQL",
+      "Communication",
+      "React"
+    ],
+    "address": {
+      "city": "Denver",
+      "state": "CO",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2025-06-17",
+    "performanceRating": 3.2
+  },
+  {
+    "id": 16,
+    "name": "Logan Brown",
+    "email": "logan.brown16@company.com",
+    "department": "HR",
+    "role": "Sales Executive",
+    "salary": 62750,
+    "joinDate": "2022-04-25",
+    "isActive": false,
+    "skills": [
+      "Figma",
+      "AWS",
+      "Leadership",
+      "TypeScript",
+      "GraphQL"
+    ],
+    "address": {
+      "city": "Atlanta",
+      "state": "GA",
+      "country": "USA"
+    },
+    "projects": 7,
+    "lastReview": "2025-07-22",
+    "performanceRating": 3.5
+  },
+  {
+    "id": 17,
+    "name": "Harper Martinez",
+    "email": "harper.martinez17@company.com",
+    "department": "Finance",
+    "role": "Developer",
+    "salary": 70000,
+    "joinDate": "2023-05-05",
+    "isActive": true,
+    "skills": [
+      "SQL",
+      "Communication"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 8,
+    "lastReview": "2025-08-27",
+    "performanceRating": 3.8
+  },
+  {
+    "id": 18,
+    "name": "James Thomas",
+    "email": "james.thomas18@company.com",
+    "department": "Sales",
+    "role": "Senior Developer",
+    "salary": 77250,
+    "joinDate": "2024-06-12",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Leadership",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    },
+    "projects": 9,
+    "lastReview": "2025-09-05",
+    "performanceRating": 4.1
+  },
+  {
+    "id": 19,
+    "name": "Evelyn White",
+    "email": "evelyn.white19@company.com",
+    "department": "Product",
+    "role": "Analyst",
+    "salary": 84500,
+    "joinDate": "2019-07-19",
+    "isActive": true,
+    "skills": [
+      "Communication",
+      "React",
+      "Node.js",
+      "Python"
+    ],
+    "address": {
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA"
+    },
+    "projects": 1,
+    "lastReview": "2025-10-10",
+    "performanceRating": 4.4
+  },
+  {
+    "id": 20,
+    "name": "Benjamin Lewis",
+    "email": "benjamin.lewis20@company.com",
+    "department": "Design",
+    "role": "Designer",
+    "salary": 91750,
+    "joinDate": "2020-08-26",
+    "isActive": true,
+    "skills": [
+      "Leadership",
+      "TypeScript",
+      "GraphQL",
+      "Figma",
+      "AWS"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 2,
+    "lastReview": "2025-11-15",
+    "performanceRating": 4.7
+  },
+  {
+    "id": 21,
+    "name": "John Smith",
+    "email": "john.smith21@company.com",
+    "department": "Operations",
+    "role": "Recruiter",
+    "salary": 99000,
+    "joinDate": "2021-09-06",
+    "isActive": false,
+    "skills": [
+      "React",
+      "Node.js"
+    ],
+    "address": {
+      "city": "Seattle",
+      "state": "WA",
+      "country": "USA"
+    },
+    "projects": 3,
+    "lastReview": "2025-12-20",
+    "performanceRating": 3
+  },
+  {
+    "id": 22,
+    "name": "Sarah Garcia",
+    "email": "sarah.garcia22@company.com",
+    "department": "Engineering",
+    "role": "Developer",
+    "salary": 106250,
+    "joinDate": "2022-10-13",
+    "isActive": true,
+    "skills": [
+      "TypeScript",
+      "GraphQL",
+      "Figma"
+    ],
+    "address": {
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA"
+    },
+    "projects": 4,
+    "lastReview": "2025-01-25",
+    "performanceRating": 3.3
+  },
+  {
+    "id": 23,
+    "name": "Maya Davis",
+    "email": "maya.davis23@company.com",
+    "department": "HR",
+    "role": "Senior Developer",
+    "salary": 113500,
+    "joinDate": "2023-11-20",
+    "isActive": true,
+    "skills": [
+      "Node.js",
+      "Python",
+      "SQL",
+      "Communication"
+    ],
+    "address": {
+      "city": "Denver",
+      "state": "CO",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2025-02-03",
+    "performanceRating": 3.6
+  },
+  {
+    "id": 24,
+    "name": "Liam Anderson",
+    "email": "liam.anderson24@company.com",
+    "department": "Finance",
+    "role": "Manager",
+    "salary": 120750,
+    "joinDate": "2024-12-27",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Figma",
+      "AWS",
+      "Leadership",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "Atlanta",
+      "state": "GA",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2025-03-08",
+    "performanceRating": 3.9
+  },
+  {
+    "id": 25,
+    "name": "Ava Moore",
+    "email": "ava.moore25@company.com",
+    "department": "Sales",
+    "role": "Designer",
+    "salary": 128000,
+    "joinDate": "2019-01-07",
+    "isActive": true,
+    "skills": [
+      "Python",
+      "SQL"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 7,
+    "lastReview": "2025-04-13",
+    "performanceRating": 4.2
+  },
+  {
+    "id": 26,
+    "name": "Noah Harris",
+    "email": "noah.harris26@company.com",
+    "department": "Product",
+    "role": "Recruiter",
+    "salary": 135250,
+    "joinDate": "2020-02-14",
+    "isActive": false,
+    "skills": [
+      "Figma",
+      "AWS",
+      "Leadership"
+    ],
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    },
+    "projects": 8,
+    "lastReview": "2025-05-18",
+    "performanceRating": 4.5
+  },
+  {
+    "id": 27,
+    "name": "Emma Walker",
+    "email": "emma.walker27@company.com",
+    "department": "Design",
+    "role": "Sales Executive",
+    "salary": 142500,
+    "joinDate": "2021-03-21",
+    "isActive": true,
+    "skills": [
+      "SQL",
+      "Communication",
+      "React",
+      "Node.js"
+    ],
+    "address": {
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA"
+    },
+    "projects": 9,
+    "lastReview": "2025-06-23",
+    "performanceRating": 4.8
+  },
+  {
+    "id": 28,
+    "name": "Oliver Johnson",
+    "email": "oliver.johnson28@company.com",
+    "department": "Operations",
+    "role": "Senior Developer",
+    "salary": 149750,
+    "joinDate": "2022-04-01",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Leadership",
+      "TypeScript",
+      "GraphQL",
+      "Figma"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 1,
+    "lastReview": "2025-07-01",
+    "performanceRating": 3.1
+  },
+  {
+    "id": 29,
+    "name": "Sophia Lee",
+    "email": "sophia.lee29@company.com",
+    "department": "Engineering",
+    "role": "Manager",
+    "salary": 59000,
+    "joinDate": "2023-05-08",
+    "isActive": true,
+    "skills": [
+      "Communication",
+      "React"
+    ],
+    "address": {
+      "city": "Seattle",
+      "state": "WA",
+      "country": "USA"
+    },
+    "projects": 2,
+    "lastReview": "2025-08-06",
+    "performanceRating": 3.4
+  },
+  {
+    "id": 30,
+    "name": "Ethan Wilson",
+    "email": "ethan.wilson30@company.com",
+    "department": "HR",
+    "role": "Analyst",
+    "salary": 66250,
+    "joinDate": "2024-06-15",
+    "isActive": true,
+    "skills": [
+      "Leadership",
+      "TypeScript",
+      "GraphQL"
+    ],
+    "address": {
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA"
+    },
+    "projects": 3,
+    "lastReview": "2025-09-11",
+    "performanceRating": 3.7
+  },
+  {
+    "id": 31,
+    "name": "Isabella Taylor",
+    "email": "isabella.taylor31@company.com",
+    "department": "Finance",
+    "role": "Recruiter",
+    "salary": 73500,
+    "joinDate": "2019-07-22",
+    "isActive": false,
+    "skills": [
+      "React",
+      "Node.js",
+      "Python",
+      "SQL"
+    ],
+    "address": {
+      "city": "Denver",
+      "state": "CO",
+      "country": "USA"
+    },
+    "projects": 4,
+    "lastReview": "2025-10-16",
+    "performanceRating": 4
+  },
+  {
+    "id": 32,
+    "name": "Lucas Jackson",
+    "email": "lucas.jackson32@company.com",
+    "department": "Sales",
+    "role": "Sales Executive",
+    "salary": 80750,
+    "joinDate": "2020-08-02",
+    "isActive": true,
+    "skills": [
+      "TypeScript",
+      "GraphQL",
+      "Figma",
+      "AWS",
+      "Leadership"
+    ],
+    "address": {
+      "city": "Atlanta",
+      "state": "GA",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2025-11-21",
+    "performanceRating": 4.3
+  },
+  {
+    "id": 33,
+    "name": "Mia Clark",
+    "email": "mia.clark33@company.com",
+    "department": "Product",
+    "role": "Developer",
+    "salary": 88000,
+    "joinDate": "2021-09-09",
+    "isActive": true,
+    "skills": [
+      "Node.js",
+      "Python"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2025-12-26",
+    "performanceRating": 4.6
+  },
+  {
+    "id": 34,
+    "name": "Mason Young",
+    "email": "mason.young34@company.com",
+    "department": "Design",
+    "role": "Manager",
+    "salary": 95250,
+    "joinDate": "2022-10-16",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Figma",
+      "AWS"
+    ],
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    },
+    "projects": 7,
+    "lastReview": "2025-01-04",
+    "performanceRating": 4.9
+  },
+  {
+    "id": 35,
+    "name": "Amelia Patel",
+    "email": "amelia.patel35@company.com",
+    "department": "Operations",
+    "role": "Analyst",
+    "salary": 102500,
+    "joinDate": "2023-11-23",
+    "isActive": true,
+    "skills": [
+      "Python",
+      "SQL",
+      "Communication",
+      "React"
+    ],
+    "address": {
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA"
+    },
+    "projects": 8,
+    "lastReview": "2025-02-09",
+    "performanceRating": 3.2
+  },
+  {
+    "id": 36,
+    "name": "Logan Brown",
+    "email": "logan.brown36@company.com",
+    "department": "Engineering",
+    "role": "Designer",
+    "salary": 109750,
+    "joinDate": "2024-12-03",
+    "isActive": false,
+    "skills": [
+      "Figma",
+      "AWS",
+      "Leadership",
+      "TypeScript",
+      "GraphQL"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 9,
+    "lastReview": "2025-03-14",
+    "performanceRating": 3.5
+  },
+  {
+    "id": 37,
+    "name": "Harper Martinez",
+    "email": "harper.martinez37@company.com",
+    "department": "HR",
+    "role": "Sales Executive",
+    "salary": 117000,
+    "joinDate": "2019-01-10",
+    "isActive": true,
+    "skills": [
+      "SQL",
+      "Communication"
+    ],
+    "address": {
+      "city": "Seattle",
+      "state": "WA",
+      "country": "USA"
+    },
+    "projects": 1,
+    "lastReview": "2025-04-19",
+    "performanceRating": 3.8
+  },
+  {
+    "id": 38,
+    "name": "James Thomas",
+    "email": "james.thomas38@company.com",
+    "department": "Finance",
+    "role": "Developer",
+    "salary": 124250,
+    "joinDate": "2020-02-17",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Leadership",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA"
+    },
+    "projects": 2,
+    "lastReview": "2025-05-24",
+    "performanceRating": 4.1
+  },
+  {
+    "id": 39,
+    "name": "Evelyn White",
+    "email": "evelyn.white39@company.com",
+    "department": "Sales",
+    "role": "Senior Developer",
+    "salary": 131500,
+    "joinDate": "2021-03-24",
+    "isActive": true,
+    "skills": [
+      "Communication",
+      "React",
+      "Node.js",
+      "Python"
+    ],
+    "address": {
+      "city": "Denver",
+      "state": "CO",
+      "country": "USA"
+    },
+    "projects": 3,
+    "lastReview": "2025-06-02",
+    "performanceRating": 4.4
+  },
+  {
+    "id": 40,
+    "name": "Benjamin Lewis",
+    "email": "benjamin.lewis40@company.com",
+    "department": "Product",
+    "role": "Analyst",
+    "salary": 138750,
+    "joinDate": "2022-04-04",
+    "isActive": true,
+    "skills": [
+      "Leadership",
+      "TypeScript",
+      "GraphQL",
+      "Figma",
+      "AWS"
+    ],
+    "address": {
+      "city": "Atlanta",
+      "state": "GA",
+      "country": "USA"
+    },
+    "projects": 4,
+    "lastReview": "2025-07-07",
+    "performanceRating": 4.7
+  },
+  {
+    "id": 41,
+    "name": "John Smith",
+    "email": "john.smith41@company.com",
+    "department": "Design",
+    "role": "Designer",
+    "salary": 146000,
+    "joinDate": "2023-05-11",
+    "isActive": false,
+    "skills": [
+      "React",
+      "Node.js"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2025-08-12",
+    "performanceRating": 3
+  },
+  {
+    "id": 42,
+    "name": "Sarah Garcia",
+    "email": "sarah.garcia42@company.com",
+    "department": "Operations",
+    "role": "Recruiter",
+    "salary": 55250,
+    "joinDate": "2024-06-18",
+    "isActive": true,
+    "skills": [
+      "TypeScript",
+      "GraphQL",
+      "Figma"
+    ],
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2025-09-17",
+    "performanceRating": 3.3
+  },
+  {
+    "id": 43,
+    "name": "Maya Davis",
+    "email": "maya.davis43@company.com",
+    "department": "Engineering",
+    "role": "Developer",
+    "salary": 62500,
+    "joinDate": "2019-07-25",
+    "isActive": true,
+    "skills": [
+      "Node.js",
+      "Python",
+      "SQL",
+      "Communication"
+    ],
+    "address": {
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA"
+    },
+    "projects": 7,
+    "lastReview": "2025-10-22",
+    "performanceRating": 3.6
+  },
+  {
+    "id": 44,
+    "name": "Liam Anderson",
+    "email": "liam.anderson44@company.com",
+    "department": "HR",
+    "role": "Senior Developer",
+    "salary": 69750,
+    "joinDate": "2020-08-05",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Figma",
+      "AWS",
+      "Leadership",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 8,
+    "lastReview": "2025-11-27",
+    "performanceRating": 3.9
+  },
+  {
+    "id": 45,
+    "name": "Ava Moore",
+    "email": "ava.moore45@company.com",
+    "department": "Finance",
+    "role": "Manager",
+    "salary": 77000,
+    "joinDate": "2021-09-12",
+    "isActive": true,
+    "skills": [
+      "Python",
+      "SQL"
+    ],
+    "address": {
+      "city": "Seattle",
+      "state": "WA",
+      "country": "USA"
+    },
+    "projects": 9,
+    "lastReview": "2025-12-05",
+    "performanceRating": 4.2
+  },
+  {
+    "id": 46,
+    "name": "Noah Harris",
+    "email": "noah.harris46@company.com",
+    "department": "Sales",
+    "role": "Designer",
+    "salary": 84250,
+    "joinDate": "2022-10-19",
+    "isActive": false,
+    "skills": [
+      "Figma",
+      "AWS",
+      "Leadership"
+    ],
+    "address": {
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA"
+    },
+    "projects": 1,
+    "lastReview": "2025-01-10",
+    "performanceRating": 4.5
+  },
+  {
+    "id": 47,
+    "name": "Emma Walker",
+    "email": "emma.walker47@company.com",
+    "department": "Product",
+    "role": "Recruiter",
+    "salary": 91500,
+    "joinDate": "2023-11-26",
+    "isActive": true,
+    "skills": [
+      "SQL",
+      "Communication",
+      "React",
+      "Node.js"
+    ],
+    "address": {
+      "city": "Denver",
+      "state": "CO",
+      "country": "USA"
+    },
+    "projects": 2,
+    "lastReview": "2025-02-15",
+    "performanceRating": 4.8
+  },
+  {
+    "id": 48,
+    "name": "Oliver Johnson",
+    "email": "oliver.johnson48@company.com",
+    "department": "Design",
+    "role": "Sales Executive",
+    "salary": 98750,
+    "joinDate": "2024-12-06",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Leadership",
+      "TypeScript",
+      "GraphQL",
+      "Figma"
+    ],
+    "address": {
+      "city": "Atlanta",
+      "state": "GA",
+      "country": "USA"
+    },
+    "projects": 3,
+    "lastReview": "2025-03-20",
+    "performanceRating": 3.1
+  },
+  {
+    "id": 49,
+    "name": "Sophia Lee",
+    "email": "sophia.lee49@company.com",
+    "department": "Operations",
+    "role": "Senior Developer",
+    "salary": 106000,
+    "joinDate": "2019-01-13",
+    "isActive": true,
+    "skills": [
+      "Communication",
+      "React"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 4,
+    "lastReview": "2025-04-25",
+    "performanceRating": 3.4
+  },
+  {
+    "id": 50,
+    "name": "Ethan Wilson",
+    "email": "ethan.wilson50@company.com",
+    "department": "Engineering",
+    "role": "Manager",
+    "salary": 113250,
+    "joinDate": "2020-02-20",
+    "isActive": true,
+    "skills": [
+      "Leadership",
+      "TypeScript",
+      "GraphQL"
+    ],
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2025-05-03",
+    "performanceRating": 3.7
+  },
+  {
+    "id": 51,
+    "name": "Isabella Taylor",
+    "email": "isabella.taylor51@company.com",
+    "department": "HR",
+    "role": "Analyst",
+    "salary": 120500,
+    "joinDate": "2021-03-27",
+    "isActive": false,
+    "skills": [
+      "React",
+      "Node.js",
+      "Python",
+      "SQL"
+    ],
+    "address": {
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2025-06-08",
+    "performanceRating": 4
+  },
+  {
+    "id": 52,
+    "name": "Lucas Jackson",
+    "email": "lucas.jackson52@company.com",
+    "department": "Finance",
+    "role": "Recruiter",
+    "salary": 127750,
+    "joinDate": "2022-04-07",
+    "isActive": true,
+    "skills": [
+      "TypeScript",
+      "GraphQL",
+      "Figma",
+      "AWS",
+      "Leadership"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 7,
+    "lastReview": "2025-07-13",
+    "performanceRating": 4.3
+  },
+  {
+    "id": 53,
+    "name": "Mia Clark",
+    "email": "mia.clark53@company.com",
+    "department": "Sales",
+    "role": "Sales Executive",
+    "salary": 135000,
+    "joinDate": "2023-05-14",
+    "isActive": true,
+    "skills": [
+      "Node.js",
+      "Python"
+    ],
+    "address": {
+      "city": "Seattle",
+      "state": "WA",
+      "country": "USA"
+    },
+    "projects": 8,
+    "lastReview": "2025-08-18",
+    "performanceRating": 4.6
+  },
+  {
+    "id": 54,
+    "name": "Mason Young",
+    "email": "mason.young54@company.com",
+    "department": "Product",
+    "role": "Developer",
+    "salary": 142250,
+    "joinDate": "2024-06-21",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Figma",
+      "AWS"
+    ],
+    "address": {
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA"
+    },
+    "projects": 9,
+    "lastReview": "2025-09-23",
+    "performanceRating": 4.9
+  },
+  {
+    "id": 55,
+    "name": "Amelia Patel",
+    "email": "amelia.patel55@company.com",
+    "department": "Design",
+    "role": "Manager",
+    "salary": 149500,
+    "joinDate": "2019-07-01",
+    "isActive": true,
+    "skills": [
+      "Python",
+      "SQL",
+      "Communication",
+      "React"
+    ],
+    "address": {
+      "city": "Denver",
+      "state": "CO",
+      "country": "USA"
+    },
+    "projects": 1,
+    "lastReview": "2025-10-01",
+    "performanceRating": 3.2
+  },
+  {
+    "id": 56,
+    "name": "Logan Brown",
+    "email": "logan.brown56@company.com",
+    "department": "Operations",
+    "role": "Analyst",
+    "salary": 58750,
+    "joinDate": "2020-08-08",
+    "isActive": false,
+    "skills": [
+      "Figma",
+      "AWS",
+      "Leadership",
+      "TypeScript",
+      "GraphQL"
+    ],
+    "address": {
+      "city": "Atlanta",
+      "state": "GA",
+      "country": "USA"
+    },
+    "projects": 2,
+    "lastReview": "2025-11-06",
+    "performanceRating": 3.5
+  },
+  {
+    "id": 57,
+    "name": "Harper Martinez",
+    "email": "harper.martinez57@company.com",
+    "department": "Engineering",
+    "role": "Designer",
+    "salary": 66000,
+    "joinDate": "2021-09-15",
+    "isActive": true,
+    "skills": [
+      "SQL",
+      "Communication"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 3,
+    "lastReview": "2025-12-11",
+    "performanceRating": 3.8
+  },
+  {
+    "id": 58,
+    "name": "James Thomas",
+    "email": "james.thomas58@company.com",
+    "department": "HR",
+    "role": "Sales Executive",
+    "salary": 73250,
+    "joinDate": "2022-10-22",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Leadership",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    },
+    "projects": 4,
+    "lastReview": "2025-01-16",
+    "performanceRating": 4.1
+  },
+  {
+    "id": 59,
+    "name": "Evelyn White",
+    "email": "evelyn.white59@company.com",
+    "department": "Finance",
+    "role": "Developer",
+    "salary": 80500,
+    "joinDate": "2023-11-02",
+    "isActive": true,
+    "skills": [
+      "Communication",
+      "React",
+      "Node.js",
+      "Python"
+    ],
+    "address": {
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2025-02-21",
+    "performanceRating": 4.4
+  },
+  {
+    "id": 60,
+    "name": "Benjamin Lewis",
+    "email": "benjamin.lewis60@company.com",
+    "department": "Sales",
+    "role": "Senior Developer",
+    "salary": 87750,
+    "joinDate": "2024-12-09",
+    "isActive": true,
+    "skills": [
+      "Leadership",
+      "TypeScript",
+      "GraphQL",
+      "Figma",
+      "AWS"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2025-03-26",
+    "performanceRating": 4.7
+  }
+]
